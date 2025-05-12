@@ -87,6 +87,7 @@ let marks = Number(prompt("Enter your marks :"));
 
 
 //Make a calculator using Switch case
+/*
 
 let num1 = Number(prompt("Enter the first number :"));
 let num2 = Number(prompt("Enter the second the number"));
@@ -115,3 +116,89 @@ switch(operation)
 
     default : alert("invalid input")
 }
+*/
+
+// truthy and falsy value 
+/*
+if(0)
+{
+    console.log("Truthy"); 
+}
+else if(1){
+    console.log("this is 0")
+}
+else
+{
+    console.log("Falsy");
+}
+*/
+
+let transactionType = prompt("Transaction Type = ");
+let accountType = prompt("accountType = ");
+let amount = parseInt(prompt("Amount = "));
+
+if((transactionType == "Deposit" || transactionType == "deposit"))
+{
+        if((accountType == "Savings" || accountType == "savings") || (accountType == "CurrentAcc" || accountType == "currentAcc"))
+        {
+        if(amount > 10000)
+        {
+                console.log("Large deposit - requires manager approval");
+        }else if(amount > 0){
+                console.log("Deposit successful");
+        }else
+            {
+                console.log("invalid amount");
+            }
+        }
+        else{
+               console.log("Invalid Account Type");
+        }
+}else if(transactionType == "Withdraw" || transactionType == "withdraw")
+   {
+    
+        if(accountType == "Savings" || accountType == "savings")
+        {
+        if(amount > 1000)
+        {
+                console.log("Saving withdrawal limits exceeded");
+        }else
+           {
+                console.log("withdrawal from savings successful");
+           }
+        }
+        else if(accountType == "CurrentAcc" || accountType == "currentAcc")
+        {
+             if(amount > 5000)
+             {
+                console.log("Overdraft alert ! Transaction Blocked");
+             }else
+            {
+                console.log("withdrawal from current Account successful");
+            }
+        }
+          
+   }else if(transactionType == "Transfer" || transactionType == "Transfer")
+   {
+
+        if(accountType == "Savings" || accountType == "savings") 
+        {
+        console.log("Transfers from saving account is not allowed");
+        }
+        else if(accountType == "CurrentAcc" || accountType == "currentAcc")
+        {
+                if(amount > 2000)
+                {
+                        console.log("Transfer requires OTP verification");
+                }else{
+                        console.log("Transfer Successful");
+                }
+        }
+   }else{
+        console.log("Invalid transaction Type");
+   }
+
+             // if(accountType == "CurrentAcc" || accountType == "savingAcc")
+                // {
+
+                // }
