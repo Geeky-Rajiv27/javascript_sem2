@@ -133,6 +133,12 @@ else
 }
 */
 
+// ------------------------------------BASIC BANKING SYSTEM USING JAVASCRIPT------------------------------------
+//  ASSIGNMENT - 1 
+
+
+/*
+
 let transactionType = prompt("Transaction Type = ");
 let accountType = prompt("accountType = ");
 let amount = parseInt(prompt("Amount = "));
@@ -198,7 +204,97 @@ if((transactionType == "Deposit" || transactionType == "deposit"))
         console.log("Invalid transaction Type");
    }
 
-             // if(accountType == "CurrentAcc" || accountType == "savingAcc")
-                // {
+*/
 
-                // }
+
+// ------------------------------------BASIC BANKING SYSTEM USING JAVASCRIPT------------------------------------
+
+// task - 2 using switch + if else
+
+/*
+
+let transactionType = prompt("Transaction Type = ");
+let accountType = prompt("accountType = ").toLowerCase();
+let amount = parseInt(prompt("Amount = "));
+
+switch((transactionType).toLowerCase())
+{
+       case "deposit":
+       {
+               if((accountType == "savings") || (accountType == "current"))
+               {
+               if(amount > 10000)
+               {
+                       console.log("Large deposit - requires manager approval");
+               }else if(amount > 0){
+                       console.log("Deposit successful");
+               }else
+                   {
+                       console.log("invalid amount");
+                   }
+               }
+               else{
+                      console.log("Invalid Account Type");
+               }
+        }
+break ;
+
+      
+
+       case "withdraw":
+
+        if((accountType == "savings") || (accountType == "current"))
+        {
+        if(amount > 1000)
+        {
+                console.log("Saving withdrawal limits exceeded");
+        }else
+           {
+                console.log("withdrawal from savings successful");
+           }
+        }
+        else if(accountType == "CurrentAcc" || accountType == "currentAcc")
+        {
+             if(amount > 5000)
+             {
+                console.log("Overdraft alert ! Transaction Blocked");
+             }else
+            {
+                console.log("withdrawal from current Account successful");
+            }
+        } else{
+                console.log("Invalid Account Type");
+         }
+    
+ break;        
+     
+       case "transfer":
+
+        if((accountType == "savings") || (accountType == "current"))
+        {
+        console.log("Transfers from saving account is not allowed");
+        }
+        else if(accountType == "CurrentAcc" || accountType == "currentAcc")
+        {
+                if(amount > 2000)
+                {
+                        console.log("Transfer requires OTP verification");
+                }else{
+                        console.log("Transfer Successful");
+                }
+        }
+   else{
+        console.log("Invalid account Type");
+   }
+
+ break;  
+
+   default : console.log("Invalid Transaction Type");
+}
+
+*/
+
+
+
+
+
