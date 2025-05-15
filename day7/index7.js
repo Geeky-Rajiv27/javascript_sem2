@@ -105,32 +105,51 @@ __________________________
 
 */
 
-/*// ---------------------first try----------------------
+// ---------------------first try----------------------
+/*
 let num = parseInt(prompt("Enter the number"));
-let sum = 0 ,rem;
-while(num != 0)
-{
-rem = num % 10 ;
-sum = sum + rem ;
-num = Math.floor(num / 10 );
-}
-let helper = sum ;
-console.log("first sum : "+(sum));
-if(helper >= 10)     // this means the sum done is a not a single integer ,so needs to do further sum untill becomes single
-{
-    let rem2 , sum2 = 0;
-    while(helper != 0)
-    {
-    rem2 = helper % 10 ;
-    sum2 = sum2 + rem2 ;
-    helper = Math.floor(helper / 10);
-    }
-    console.log("second sum : "+(sum2));
-}else{
-    console.log(" It is already a single digit that is "+(sum));
-}
-*/
+let sum = 0, rem;
 
+while (num != 0) {
+    rem = num % 10;
+    sum = sum + rem;
+    num = Math.floor(num / 10);
+}
+
+console.log("first sum: " + sum);
+
+let helper = sum;
+let helper2, helper3;
+
+if (helper >= 10) {
+    let sum2 = 0, rem2;
+    while (helper != 0) {
+        rem2 = helper % 10;
+        sum2 += rem2;
+        helper = Math.floor(helper / 10);
+    }
+
+    console.log("second sum: " + sum2);
+    helper2 = sum2;
+
+    if (helper2 >= 10) {
+        let sum3 = 0, rem3;
+        while (helper2 != 0) {
+            rem3 = helper2 % 10;
+            sum3 += rem3;
+            helper2 = Math.floor(helper2 / 10);
+        }
+
+        console.log("third sum: " + sum3);
+    } else {
+        console.log("Final single-digit is: " + helper2);
+    }
+
+} else {
+    console.log("It is already a single digit: " + helper);
+}
+
+*/
 
 // third try
 /*
@@ -155,8 +174,8 @@ while(number >= 10)    // step - 2
     number = getintegers(number);
 }
 console.log(number);
-*/
 
+*/
 
 
 /*
@@ -177,7 +196,7 @@ __________________________
 __________________________
 */
 
-
+/*
 let num = parseInt(prompt("Enter the number"));
 let rem ;
 let count = 0 ;
@@ -191,3 +210,4 @@ if(rem == 5)
 }
 }
 console.log("Count of digit 5 is : " + (count));
+*/
