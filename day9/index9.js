@@ -42,7 +42,7 @@ console.log("the least occuring digit is : "+(min_digit)+" and the count is " +(
 /* 
 Problem :
 Ask the user to enter any value . Based on the input , determine whether it is 
-a number , boolean , null , or indefined and display the result using alert.
+a number , boolean , null , or undefined and display the result using alert.
 */
 
 /*
@@ -60,6 +60,7 @@ if(input)
     alert("Invalid INput. ");
 }
 */
+
 
 
 // Assignment -2 |: Multiplies Printer
