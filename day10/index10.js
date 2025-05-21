@@ -184,15 +184,15 @@ alert("the sum of "+(num)+" terms of even number is : "+(sum) );
   perfect squares (1^2 + 2^2 + 3^2 + ......+ n^2), and display it using alert().
   */
 
-
+/*
 
 let num = Number(prompt("Enter any number : "));
-let sum = 0 , count = 0;
+let sum = 0;
 for(let i = 1 ; i <= num; i++)
 {
     sum = sum + (i*i) ;
 }
 alert("the sum of "+(num)+" terms of even number is : "+(sum) );
 
-
+*/
 
